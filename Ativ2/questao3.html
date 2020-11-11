@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+<body>
+    <ul id="lista">
+
+    </ul>
+    <input type="button" onclick="criarLista()" value="Criar lista">
+    <script>
+        function criarLista(){
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        var listaNomes = document.getElementById('lista');
+        for(var k = 0; k < nomes.length; k++){
+        var item = document.createElement('li');
+        item.appendChild(document.createTextNode(nomes[k]));
+        lista.appendChild(item);
+        }
+    }
+    </script>
+</body>
+</html>

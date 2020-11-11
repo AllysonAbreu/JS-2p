@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <button class='botao' id='botao' onClick="criarQuadrado()">Criar novo quadrado</button>
+    <div>
+        <div class="box"></div>
+    </div>
+<script>
+    function getRandomColor (){
+        var letters = "0123456789ABCDEF"
+        var color = "#"
+        for (var i = 0; i<6; i++) {
+            color += letters[Math.floor(Math.random() * 16)]
+        }
+        return color
+    }
+    
+    var botaoCriar = document.querySelector('#botao')
+    function criarQuadrado() {
+        let boxElement = document.createElement("div");
+        boxElement.style.width = '100px';
+        boxElement.style.height = '100px';
+        boxElement.style.margin = '10px';
+        boxElement.style.backgroundColor = '#ff0000';
+        boxElement.addEventListener('mouseover', function() {
+            let newColor = getRandomColor()
+            return this.style.backgroundColor = newColor
+        })
+        boxElement.classList.add('box');
+        document.body.appendChild(boxElement);
+    }
+</script>
+</body>
+</html>
